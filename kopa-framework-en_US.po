@@ -1,0 +1,628 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Kopa Framework v1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-09-13 02:36:59+0000\n"
+"Last-Translator: thanh4890 <thanh4890@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: includes/admin/class-kopa-admin-assets.php:96
+#: includes/admin/class-kopa-admin-settings.php:694
+#@ kopa-framework
+msgid "Enter font name"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:98
+#@ kopa-framework
+msgid "Custom font"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:102
+#: includes/admin/class-kopa-admin-settings.php:699
+#@ kopa-framework
+msgid "Upload .woff font file"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:107
+#: includes/admin/class-kopa-admin-settings.php:704
+#@ kopa-framework
+msgid "Upload .ttf font file"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:112
+#: includes/admin/class-kopa-admin-settings.php:709
+#@ kopa-framework
+msgid "Upload .eot font file"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:117
+#: includes/admin/class-kopa-admin-settings.php:714
+#@ kopa-framework
+msgid "Upload .svg font file"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:122
+#: includes/admin/class-kopa-admin-settings.php:593
+#: includes/admin/class-kopa-admin-settings.php:774
+#@ kopa-framework
+msgid "Upload"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:123
+#: includes/admin/class-kopa-admin-settings.php:595
+#: includes/admin/class-kopa-admin-settings.php:610
+#: includes/admin/class-kopa-admin-settings.php:776
+#@ kopa-framework
+msgid "Remove"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:124
+#@ kopa-framework
+msgid "Click OK to reset. Any selected settings will be lost!"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:125
+#@ kopa-framework
+msgid "Click OK to import. Any selected settings will be lost!"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:126
+#: includes/admin/class-kopa-admin-assets.php:139
+#@ kopa-framework
+msgid "Are you sure you want to delete?"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:136
+#@ kopa-framework
+msgid "Warning"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:137
+#@ kopa-framework
+msgid "Error"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:138
+#@ kopa-framework
+msgid "Info"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:140
+#: includes/admin/class-kopa-admin-settings.php:786
+#: includes/admin/class-kopa-admin-settings.php:920
+#@ kopa-framework
+msgid "Close"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:141
+#: includes/admin/class-kopa-admin-settings.php:784
+#: includes/admin/class-kopa-admin-settings.php:918
+#@ kopa-framework
+msgid "Delete"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:142
+#: includes/admin/class-kopa-admin-settings.php:902
+#@ kopa-framework
+msgid "Advanced Settings"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:144
+#: includes/admin/class-kopa-admin-settings.php:837
+#@ kopa-framework
+msgid "Name"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:145
+#: includes/admin/class-kopa-admin-settings.php:838
+#@ kopa-framework
+msgid "Description"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:146
+#: includes/admin/class-kopa-admin-settings.php:839
+#@ kopa-framework
+msgid "Before Widget"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:147
+#: includes/admin/class-kopa-admin-settings.php:840
+#@ kopa-framework
+msgid "After Widget"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:148
+#: includes/admin/class-kopa-admin-settings.php:841
+#@ kopa-framework
+msgid "Before Title"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-assets.php:149
+#: includes/admin/class-kopa-admin-settings.php:842
+#@ kopa-framework
+msgid "After Title"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-backup.php:115
+#@ kopa-framework
+msgid "There was a problem importing your settings."
+msgstr ""
+
+#: includes/admin/class-kopa-admin-backup.php:121
+#@ kopa-framework
+msgid "The import file you've provided is invalid."
+msgstr ""
+
+#: includes/admin/class-kopa-admin-backup.php:141
+#@ kopa-framework
+msgid "Settings successfully imported."
+msgstr ""
+
+#: includes/admin/class-kopa-admin-help.php:45
+#@ kopa-framework
+msgid "Documentation"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-help.php:48
+#@ kopa-framework
+msgid "Thank you for using Kopa Framework. Should you need help using or extending Kopa Framework please read the documentation."
+msgstr ""
+
+#: includes/admin/class-kopa-admin-help.php:50
+#@ kopa-framework
+msgid "Kopa Framework Documentation"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-help.php:50
+#@ kopa-framework
+msgid "Developer API Docs"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-help.php:56
+#@ kopa-framework
+msgid "Support"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-help.php:59
+#, php-format
+#@ kopa-framework
+msgid "After <a href=\"%s\">reading the documentation</a>, for further assistance you can use the <a href=\"%s\">community forum</a>, or if you have access as a Kopatheme customer, <a href=\"%s\">our support desk</a>."
+msgstr ""
+
+#: includes/admin/class-kopa-admin-help.php:61
+#@ kopa-framework
+msgid "Community Support"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-help.php:61
+#@ kopa-framework
+msgid "Customer Support"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-help.php:67
+#@ kopa-framework
+msgid "Found a bug?"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-help.php:70
+#, php-format
+#@ kopa-framework
+msgid "If you find a bug within Kopa Framework core you can create a ticket via <a href=\"%s\">Kopatheme ticket</a>. Ensure you read the <a href=\"%s\">contribution guide</a> prior to submitting your report. Be as descriptive as possible."
+msgstr ""
+
+#: includes/admin/class-kopa-admin-help.php:72
+#@ kopa-framework
+msgid "Report a bug"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-help.php:78
+#@ kopa-framework
+msgid "For more information:"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-help.php:79
+#@ kopa-framework
+msgid "About Kopa Framework"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-help.php:80
+#@ kopa-framework
+msgid "Project on WordPress.org"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-help.php:81
+#@ kopa-framework
+msgid "Official Themes"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-menus.php:49
+#: includes/admin/class-kopa-admin-menus.php:50
+#: includes/admin/settings/class-kopa-settings-backup-manager.php:68
+#: includes/admin/settings/class-kopa-settings-backup-manager.php:102
+#: includes/admin/settings/class-kopa-settings-theme-options.php:28
+#@ kopa-framework
+msgid "Theme Options"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-settings.php:99
+#@ kopa-framework
+msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: includes/admin/class-kopa-admin-settings.php:115
+#@ kopa-framework
+msgid "Default options restored."
+msgstr ""
+
+#: includes/admin/class-kopa-admin-settings.php:120
+#@ kopa-framework
+msgid "Your settings have been saved."
+msgstr ""
+
+#: includes/admin/class-kopa-admin-settings.php:586
+#@ kopa-framework
+msgid "No file chosen"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-settings.php:598
+#@ kopa-framework
+msgid "Upgrade your version of WordPress for full media support."
+msgstr ""
+
+#: includes/admin/class-kopa-admin-settings.php:624
+#@ kopa-framework
+msgid "View File"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-settings.php:642
+#@ kopa-framework
+msgid "preview text"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-settings.php:802
+#@ kopa-framework
+msgid "Add New Font"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-settings.php:809
+#@ kopa-framework
+msgid "Import"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-settings.php:820
+#@ kopa-framework
+msgid "Download Export File"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-settings.php:865
+#@ kopa-framework
+msgid "Add New"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-settings.php:958
+#: includes/admin/layouts/class-kopa-layout-box.php:65
+#@ kopa-framework
+msgid "Select layout"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-settings.php:988
+#: includes/admin/layouts/class-kopa-layout-box.php:91
+#@ kopa-framework
+msgid "&mdash;Select sidebar&mdash;"
+msgstr ""
+
+#: includes/admin/class-kopa-admin-settings.php:1022
+#@ kopa-framework
+msgid "Restore Defaults"
+msgstr ""
+
+#: includes/admin/layouts/class-kopa-layout-box.php:53
+#@ kopa-framework
+msgid "Check if you would like to use custom setting"
+msgstr ""
+
+#: includes/admin/layouts/class-kopa-layout-box.php:120
+#: includes/admin/layouts/class-kopa-layout-post-type.php:49
+#@ kopa-framework
+msgid "Custom Layout"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-backup-manager.php:28
+#@ kopa-framework
+msgid "Backup"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-backup-manager.php:48
+#@ kopa-framework
+msgid "Restore Default"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-backup-manager.php:54
+#@ kopa-framework
+msgid "Restore Default Settings"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-backup-manager.php:55
+#@ kopa-framework
+msgid "Select one of the options below. When you click the \"Restore Defaults\" button below, the Kopa Framework will restore corresponding default settings for you."
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-backup-manager.php:67
+#: includes/admin/settings/class-kopa-settings-backup-manager.php:101
+#@ kopa-framework
+msgid "All Settings (This will contain all of the options listed below.)"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-backup-manager.php:69
+#: includes/admin/settings/class-kopa-settings-backup-manager.php:103
+#@ kopa-framework
+msgid "Sidebars &amp; Layouts"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-backup-manager.php:76
+#@ kopa-framework
+msgid "Import/Export"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-backup-manager.php:82
+#@ kopa-framework
+msgid "Import Settings"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-backup-manager.php:85
+#@ kopa-framework
+msgid ""
+"If you have settings in a backup file on your computer, the Kopa Framework can import those into this site.\n"
+"To get started, upload your backup file to import from below."
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-backup-manager.php:89
+#@ kopa-framework
+msgid "Export Settings"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-backup-manager.php:92
+#, php-format
+#@ kopa-framework
+msgid ""
+"When you click the button below, the Kopa Framework will create a text file for you to save to your computer.\n"
+"This text file can be used to restore your settings here on \"%s\", or to easily setup another website with the same settings."
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-layout-manager.php:28
+#@ kopa-framework
+msgid "Layout Manager"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-layout-manager.php:67
+#: includes/admin/settings/class-kopa-settings-layout-manager.php:73
+#@ kopa-framework
+msgid "Frontpage"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-layout-manager.php:83
+#: includes/admin/settings/class-kopa-settings-layout-manager.php:89
+#@ kopa-framework
+msgid "Blog"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-layout-manager.php:99
+#: includes/admin/settings/class-kopa-settings-layout-manager.php:105
+#@ kopa-framework
+msgid "Page"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-layout-manager.php:115
+#: includes/admin/settings/class-kopa-settings-layout-manager.php:121
+#@ kopa-framework
+msgid "Post"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-sidebar-manager.php:28
+#: includes/admin/settings/class-kopa-settings-sidebar-manager.php:49
+#@ kopa-framework
+msgid "Sidebar Manager"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-sidebar-manager.php:55
+#@ kopa-framework
+msgid "Add as many sidebars (widget areas) as you need. Creating sidebars (widget areas) is unlimited."
+msgstr ""
+
+#: includes/admin/views/html-admin-settings.php:29
+#: includes/admin/views/html-admin-settings.php:43
+#@ kopa-framework
+msgid "Save Options"
+msgstr ""
+
+#: includes/admin/views/html-admin-settings.php:58
+#@ kopa-framework
+msgid "OK"
+msgstr ""
+
+#: includes/admin/views/html-admin-settings.php:59
+#@ kopa-framework
+msgid "Cancel"
+msgstr ""
+
+#: includes/class-kopa-ajax.php:61
+#@ kopa-framework
+msgid "This sidebar is currently containing widgets."
+msgstr ""
+
+#: includes/class-kopa-ajax.php:85
+#, php-format
+#@ kopa-framework
+msgid "%1$s of %2$s."
+msgstr ""
+
+#: includes/class-kopa-ajax.php:102
+#@ kopa-framework
+msgid "This sidebar is being used in:"
+msgstr ""
+
+#: includes/class-kopa-ajax.php:103
+#@ kopa-framework
+msgid "You cannot delete this sidebar."
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12512
+#@ kopa-framework
+msgid "Thin"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12516
+#@ kopa-framework
+msgid "Thin/Italic"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12520
+#@ kopa-framework
+msgid "Extra-Light"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12524
+#@ kopa-framework
+msgid "Extra-Light/Italic"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12528
+#@ kopa-framework
+msgid "Light"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12532
+#@ kopa-framework
+msgid "Light/Italic"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12536
+#: includes/kopa-fonts-functions.php:12544
+#@ kopa-framework
+msgid "Normal"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12540
+#: includes/kopa-fonts-functions.php:12548
+#@ kopa-framework
+msgid "Normal/Italic"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12552
+#@ kopa-framework
+msgid "Medium"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12556
+#@ kopa-framework
+msgid "Medium/Italic"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12560
+#@ kopa-framework
+msgid "Semi-Bold"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12564
+#@ kopa-framework
+msgid "Semi-Bold/Italic"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12568
+#: includes/kopa-fonts-functions.php:12576
+#@ kopa-framework
+msgid "Bold"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12572
+#: includes/kopa-fonts-functions.php:12580
+#@ kopa-framework
+msgid "Bold/Italic"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12584
+#@ kopa-framework
+msgid "Extra-Bold"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12588
+#@ kopa-framework
+msgid "Extra-Bold/Italic"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12592
+#@ kopa-framework
+msgid "Ultra-Bold"
+msgstr ""
+
+#: includes/kopa-fonts-functions.php:12596
+#@ kopa-framework
+msgid "Ultra-Bold/Italic"
+msgstr ""
+
+#. translators: plugin header field 'Name'
+#: kopa-framework.php:0
+#@ kopa-framework
+msgid "Kopa Framework"
+msgstr ""
+
+#. translators: plugin header field 'PluginURI'
+#: kopa-framework.php:0
+#@ kopa-framework
+msgid "http://kopatheme.com/framework"
+msgstr ""
+
+#. translators: plugin header field 'Description'
+#: kopa-framework.php:0
+#@ kopa-framework
+msgid "A WordPress framework by Kopatheme."
+msgstr ""
+
+#. translators: plugin header field 'Author'
+#: kopa-framework.php:0
+#@ kopa-framework
+msgid "Kopatheme"
+msgstr ""
+
+#. translators: plugin header field 'AuthorURI'
+#: kopa-framework.php:0
+#@ kopa-framework
+msgid "http://kopatheme.com"
+msgstr ""
+
+#. translators: plugin header field 'Version'
+#: kopa-framework.php:0
+#@ kopa-framework
+msgid "1.0.0"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-layout-manager.php:131
+#: includes/admin/settings/class-kopa-settings-layout-manager.php:137
+#@ kopa-framework
+msgid "Search"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-layout-manager.php:147
+#@ kopa-framework
+msgid "404"
+msgstr ""
+
+#: includes/admin/settings/class-kopa-settings-layout-manager.php:153
+#@ kopa-framework
+msgid "Error 404"
+msgstr ""
+
