@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: KOPATHEME
- * Plugin URI: http://kopatheme.com
- * Description: The KOPATHEME plugin is an easy way to get theme options, sidebar manager, layout manager and custom layouts feature to your WordPress site.
- * Version: 1.0.0
- * Author: Kopatheme
+ * Plugin Name: Kopa Framework
+ * Plugin URI: http://kopatheme.com/framework
+ * Description: A WordPress framework by Kopatheme.
+ * Version: 1.0.1
+ * Author: KOPASOFT
  * Author URI: http://kopatheme.com
  * License: GPLv2 or later
  * Requires at least: 3.8
@@ -25,7 +25,7 @@ if ( ! class_exists( 'Kopa_Framework' ) ) {
  * @author    Kopatheme
  * @copyright 2014 Kopatheme
  * @license   GPLv2 or later
- * @version   1.0.0
+ * @version   1.0.1
  * @package   KopaFramework
  * @link      http://kopatheme.com
  */
@@ -35,7 +35,7 @@ final class Kopa_Framework {
 	 * @access public
 	 * @var string framework version
 	 */
-	public $version = '1.0.0';
+	public $version = '1.0.1';
 
 	/**
 	 * @access protected

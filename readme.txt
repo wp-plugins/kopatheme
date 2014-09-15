@@ -4,7 +4,7 @@ Tags: framework, tool, feature, theme-options, sidebar-manager, layout-manager, 
 Donate link: 
 Requires at least: 3.8
 Tested up to: 3.9
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 
 A WordPress framework by Kopatheme
@@ -20,6 +20,9 @@ The Kopa Framework plugin is an easy way to get theme options, sidebar manager, 
 3. Go to Appearance->Theme Options and use.
 
 == Changelog ==
+
+= 1.0.1 =
+* Sanitize for number option type
 
 = 1.0.0 =
 * First version

@@ -31,7 +31,7 @@ class Kopa_Admin_Settings_Sanitization {
 			'text'                => 'sanitize_string',
 			'email'               => 'sanitize_string',
 			'url'                 => 'sanitize_string',
-			'number'              => 'sanitize_string',
+			'number'              => array( 'sanitize_string', 'sanitize_number' ),
 			'select'              => 'sanitize_string',
 			'color'               => 'sanitize_string',
 			'password'            => 'sanitize_string',
@@ -68,7 +68,6 @@ class Kopa_Admin_Settings_Sanitization {
 
 		add_filter( 'kopa_sanitize_option_email', 'sanitize_email' );
 		add_filter( 'kopa_sanitize_option_url', 'esc_url' );
-		add_filter( 'kopa_sanitize_option_number', 'floatval' );
 	}
 
 	/**
@@ -123,6 +122,25 @@ class Kopa_Admin_Settings_Sanitization {
 		}
 
 		return $clean;
+	}
+
+	/**
+	 * Sanitize number
+	 *
+	 * @param string $input input data
+	 * @param array $option option arguments 
+	 * @return string $input sanitized number
+	 * @return string empty string if not is numeric
+	 *
+	 * @since 1.0.1
+	 * @access public
+	 */
+	public function sanitize_number( $input, $option ) {
+		if ( is_numeric( $input ) ) {
+			return $input;
+		}
+
+		return '';
 	}
 
 	/**
@@ -249,8 +267,10 @@ class Kopa_Admin_Settings_Sanitization {
 	 * @access public
 	 */
 	public function sanitize_select_font( $input, $option ) {
-		if ( isset( $input['size'] ) && $input['size'] ) {
-			$input['size'] = abs( floatval( $input['size'] ) );
+		if ( isset( $input['size'] ) && is_numeric( $input['size'] ) ) {
+			$input['size'] = abs( $input['size'] );
+		} else {
+			$input['size'] = '';
 		}
 
 		return $input;
