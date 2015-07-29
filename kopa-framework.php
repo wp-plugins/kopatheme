@@ -1,14 +1,13 @@
 <?php
 /**
  * Plugin Name: Kopa Framework
- * Plugin URI: http://kopatheme.com/framework
  * Description: A WordPress framework by Kopatheme.
- * Version: 1.0.1
- * Author: KOPASOFT
+ * Version: 1.0.8
+ * Author: Kopa Theme
  * Author URI: http://kopatheme.com
  * License: GPLv2 or later
  * Requires at least: 3.8
- * Tested up to: 3.9
+ * Tested up to: 4.0
  *
  * Text Domain: kopa-framework
  * Domain Path: /languages/
@@ -25,7 +24,7 @@ if ( ! class_exists( 'Kopa_Framework' ) ) {
  * @author    Kopatheme
  * @copyright 2014 Kopatheme
  * @license   GPLv2 or later
- * @version   1.0.1
+ * @version   1.0.7
  * @package   KopaFramework
  * @link      http://kopatheme.com
  */
@@ -35,7 +34,7 @@ final class Kopa_Framework {
 	 * @access public
 	 * @var string framework version
 	 */
-	public $version = '1.0.1';
+	public $version = '1.0.7';
 
 	/**
 	 * @access protected
@@ -107,6 +106,9 @@ final class Kopa_Framework {
 	private function includes() {
 		// functions
 		include_once( 'includes/kopa-core-functions.php' );
+
+		// include master-widget
+		include_once( 'includes/abstracts/abstract-kopa-widget.php' );
 
 		// settings class (special important class)
 		include_once( 'includes/admin/class-kopa-admin-settings.php' );
@@ -217,7 +219,7 @@ final class Kopa_Framework {
 	 * @access public
 	 */
 	public function include_widgets() {
-		include_once( 'includes/abstracts/abstract-kopa-widget.php' );
+		
 
 		$sidebar_settings = kopa_get_sidebar_arguments();
 

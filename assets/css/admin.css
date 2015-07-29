@@ -173,9 +173,12 @@
   line-height: 1.4;
 }
 #kopa_options_wrap .kopa_tab_content .kopa_description {
-  font-size: 13px;
   margin-bottom: 10px;
   margin-top: -10px;
+  font-size: 11px;
+}
+#kopa_options_wrap .kopa_tab_content .kopa_description p {
+  font-size: 11px;
 }
 #kopa_options_wrap .kopa_tab_content .kopa_section {
   padding: 20px;
@@ -703,6 +706,11 @@
 @viewport {
   width: device-width;
 }
+.kopa-widget-block {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
 @media screen and (max-width: 1023px) {
   #kopa_options_wrap .postbox {
     margin-top: 0;

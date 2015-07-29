@@ -209,9 +209,12 @@ $bg:#f8f8f8;
 			line-height: 1.4;
 		}
 		.kopa_description {
-			font-size: 13px;
 			margin-bottom: 10px;
 			margin-top: -10px;
+			font-size: 11px;
+			p{
+				font-size: 11px;
+			}			
 		}
 		.kopa_section {
 			padding: 20px;
@@ -631,6 +634,11 @@ $bg:#f8f8f8;
 
 @viewport {
   width: device-width;
+}
+
+.kopa-widget-block{
+	margin-top: 12px;
+	margin-bottom: 12px;
 }
 
 @media screen and (max-width: 1270px) {

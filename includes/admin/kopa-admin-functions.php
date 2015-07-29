@@ -26,3 +26,23 @@ function kopa_get_screen_ids() {
     	'appearance_page_' . $kopa_screen_id,
     ) );
 }
+
+/**
+ * Register metabox
+ *
+ * @uses Kopa_Admin_Meta_Box class
+ * @param array $args metabox settings
+ *
+ * @since 1.0.5
+ */
+if ( ! function_exists( 'kopa_register_metabox' ) ) {
+	function kopa_register_metabox( $args = array() ) {
+
+		if ( empty( $args ) ) {
+			return;
+		}
+
+		new Kopa_Admin_Meta_Box( $args );
+
+	}
+}

@@ -39,6 +39,7 @@ class Kopa_Admin {
 		include_once( 'class-kopa-admin-backup.php' );
 		include_once( 'class-kopa-admin-settings-sanitization.php' );
 		include_once( 'class-kopa-admin-custom-layouts.php' );
+		include_once( 'class-kopa-admin-meta-box.php' );
 
 		// Classes we only need if the ajax is not-ajax
 		if ( ! defined( 'DOING_AJAX' ) ) {

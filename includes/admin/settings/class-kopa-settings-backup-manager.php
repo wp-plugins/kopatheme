@@ -64,11 +64,9 @@ class Kopa_Settings_Backup_Manager extends Kopa_Settings_Page {
 					 * @see id: layout-manager | class: Kopa_Settings_Layout_Manager | file: class-kopa-settings-layout-manager.php 
 					 */
 					'options' => array(
-						'theme-options,sidebar-manager,layout-manager' => __( 'All Settings (This will contain all of the options listed below.)', 'kopa-framework' ),
-						'theme-options' => __( 'Theme Options', 'kopa-framework' ),
-						'sidebar-manager,layout-manager' => __( 'Sidebars &amp; Layouts', 'kopa-framework' ),
+						'sidebar-manager,layout-manager' => __( 'All Settings', 'kopa-framework' ),
 					),
-					'default' => 'theme-options,sidebar-manager,layout-manager',
+					'default' => 'sidebar-manager,layout-manager',
 				),
 
 			// backup settings
@@ -98,11 +96,9 @@ class Kopa_Settings_Backup_Manager extends Kopa_Settings_Page {
 					 * @see id: layout-manager | class: Kopa_Settings_Layout_Manager | file: class-kopa-settings-layout-manager.php 
 					 */
 					'options' => array(
-						'theme-options,sidebar-manager,layout-manager' => __( 'All Settings (This will contain all of the options listed below.)', 'kopa-framework' ),
-						'theme-options' => __( 'Theme Options', 'kopa-framework' ),
-						'sidebar-manager,layout-manager' => __( 'Sidebars &amp; Layouts', 'kopa-framework' ),
+						'sidebar-manager,layout-manager' => __( 'All Settings', 'kopa-framework' ),
 					),
-					'default' => 'theme-options,sidebar-manager,layout-manager',
+					'default' => 'sidebar-manager,layout-manager',
 				),
 		) );
 	}

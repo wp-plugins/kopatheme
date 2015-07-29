@@ -204,6 +204,15 @@ class Kopa_Admin_Settings_Sanitization {
 			return '';
 		}
 
+		/**
+		 * check whether sanitize via kses methods or not
+		 *
+		 * @since 1.0.7
+		 */
+		if ( isset( $option['validate'] ) && ! $option['validate'] ) {
+			return trim( stripslashes( $input ) );
+		}
+
 		return wp_kses_post( trim( stripslashes( $input ) ) );
 	}
 
@@ -267,6 +276,13 @@ class Kopa_Admin_Settings_Sanitization {
 	 * @access public
 	 */
 	public function sanitize_select_font( $input, $option ) {
+		$input = wp_parse_args( $input, array(
+			'family' => '',
+			'style'  => '',
+			'size'   => '',
+			'color'  => '',
+		) );
+
 		if ( isset( $input['size'] ) && is_numeric( $input['size'] ) ) {
 			$input['size'] = abs( $input['size'] );
 		} else {

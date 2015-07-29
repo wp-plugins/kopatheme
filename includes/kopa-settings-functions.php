@@ -113,7 +113,7 @@ function kopa_get_template_setting() {
 		$setting = kopa_get_option( $setting_id );
 	}
 
-	$setting = apply_filters( 'kopa_custom_template_setting', $setting );
+	$setting = apply_filters( 'kopa_custom_template_setting', $setting, $setting_id);
 
 	// live update layout manager
 	if ( $setting_id ) {

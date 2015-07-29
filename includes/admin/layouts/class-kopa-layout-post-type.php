@@ -110,14 +110,35 @@ class Kopa_Layout_Post_Type extends Kopa_Layout_Box {
 		
 		$new = array();
 
+		// don't save if $_POST is empty
+		if ( empty( $_POST ) ) {
+        	return $post_id;
+		}
+
+		// don't save during autosave
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+			return $post_id;
+		}
+
 		// check nonce
 		if ( ! isset( $_POST['_kopa_custom_layout'] ) ) {
-			return;
+			return $post_id;
 		}
 
 		// verify nonce
 		if ( ! wp_verify_nonce( $_POST['_kopa_custom_layout'], $screen . '_custom_layout' ) ) {
-			return;
+			return $post_id;
+		}
+
+		/* check permissions */
+		if ( isset( $_POST['post_type'] ) && 'page' == $_POST['post_type'] ) {
+			if ( ! current_user_can( 'edit_page', $post_id ) ) {
+				return $post_id;
+			}
+		} else {
+			if ( ! current_user_can( 'edit_post', $post_id ) ) {
+				return $post_id;
+			}
 		}
 
 		// custom layout data

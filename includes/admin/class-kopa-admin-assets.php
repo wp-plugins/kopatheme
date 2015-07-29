@@ -34,7 +34,7 @@ class Kopa_Admin_Assets {
 	 * @since 1.0.0
 	 * @access public
 	 */
-	public function admin_styles() {
+	public function admin_styles($hook) {
 		global $wp_scripts;
 
 		$screen = get_current_screen();
@@ -47,6 +47,13 @@ class Kopa_Admin_Assets {
 
 		// style for custom layout feature
 		wp_register_style( 'kopa_custom_layout', KF()->framework_url() . '/assets/css/custom-layout.css', array(), KOPA_FRAMEWORK_VERSION );
+
+		// Widget form styles
+		wp_register_style( 'kopa_widget', KF()->framework_url() . '/assets/css/widget.css', array(), KOPA_FRAMEWORK_VERSION );
+
+		if(in_array($hook, array('widgets.php', 'post.php', 'post-new.php'))){
+			wp_enqueue_style( 'kopa_widget' );
+		}
 
 		// check admin pages to enqueue styles
 		if ( in_array( $screen->id, kopa_get_screen_ids() ) ) {
@@ -74,7 +81,7 @@ class Kopa_Admin_Assets {
 		// $suffix       = false ? '' : '.min';
 
 		// Register scripts
-		wp_register_script( 'kopa_admin', KF()->framework_url() . '/assets/js/admin'.$suffix.'.js', array( 'jquery', 'wp-color-picker', 'jquery-ui-sortable' ), KOPA_FRAMEWORK_VERSION );
+		wp_register_script( 'kopa_admin', KF()->framework_url() . '/assets/js/admin'.$suffix.'.js', array( 'jquery', 'wp-color-picker', 'jquery-ui-sortable', 'kopa_media_uploader' ), KOPA_FRAMEWORK_VERSION );
 
 		wp_register_script( 'kopa_dynamic_sidebar', KF()->framework_url() .'/assets/js/admin-sidebar'.$suffix.'.js', array( 'jquery', 'jquery-ui-sortable', 'thickbox' ), KOPA_FRAMEWORK_VERSION );
 
@@ -83,8 +90,10 @@ class Kopa_Admin_Assets {
 		// script for custom layout feature
 		wp_register_script( 'kopa_custom_layout', KF()->framework_url() . '/assets/js/custom-layout'.$suffix.'.js', array( 'jquery' ), KOPA_FRAMEWORK_VERSION );
 
+		wp_register_script( 'kopa_media_uploader', KF()->framework_url() . '/assets/js/media-uploader'.$suffix.'.js', array( 'jquery' ), KOPA_FRAMEWORK_VERSION );
+
 		// KopaFramework admin pages
-	    if ( in_array( $screen->id, kopa_get_screen_ids() ) ) {
+		if ( in_array( $screen->id, kopa_get_screen_ids() ) ) {
 			wp_enqueue_script( 'kopa_admin' );
 			wp_localize_script( 'kopa_admin', 'kopa_google_fonts', kopa_google_font_property_list_array() );
 			wp_localize_script( 'kopa_admin', 'kopa_google_font_families', kopa_google_font_list() );
@@ -96,35 +105,35 @@ class Kopa_Admin_Assets {
 					'placeholder' => __( 'Enter font name', 'kopa-framework' ),
 					'required'    => false,
 					'value'       => __( 'Custom font', 'kopa-framework' ),
-				),
+					),
 				'woff' => array(
 					'type'        => 'upload',
 					'placeholder' => __( 'Upload .woff font file', 'kopa-framework' ),
 					'mimes'       => 'font/woff',
-				),
+					),
 				'ttf' => array(
 					'type'        => 'upload',
 					'placeholder' => __( 'Upload .ttf font file', 'kopa-framework' ),
 					'mimes'       => 'font/truetype',
-				),
+					),
 				'eot' => array(
 					'type'        => 'upload',
 					'placeholder' => __( 'Upload .eot font file', 'kopa-framework' ),
 					'mimes'       => 'font/eot',
-				),
+					),
 				'svg' => array(
 					'type'        => 'upload',
 					'placeholder' => __( 'Upload .svg font file', 'kopa-framework' ),
 					'mimes'       => 'font/svg',
-				),
-			) );
+					),
+				) );
 			wp_localize_script( 'kopa_admin', 'kopa_admin_l10n', array(
 				'upload' => __( 'Upload', 'kopa-framework' ),
 				'remove' => __( 'Remove', 'kopa-framework' ),
 				'confirm_reset'   => __( 'Click OK to reset. Any selected settings will be lost!', 'kopa-framework' ),
 				'confirm_import'  => __( 'Click OK to import. Any selected settings will be lost!', 'kopa-framework' ),
 				'confirm_delete'  => __( 'Are you sure you want to delete?', 'kopa-framework' ),
-			) );
+				) );
 
 			if ( function_exists( 'wp_enqueue_media' ) ) {
 				wp_enqueue_media();
@@ -147,13 +156,31 @@ class Kopa_Admin_Assets {
 					'after_widget'  => __( 'After Widget', 'kopa-framework' ),
 					'before_title'  => __( 'Before Title', 'kopa-framework' ),
 					'after_title'   => __( 'After Title', 'kopa-framework' ),
-				),
-			) );
+					),
+				) );
 
-			wp_enqueue_script( 'kopa_dynamic_layout' );
-		}
+wp_enqueue_script( 'kopa_dynamic_layout' );
+}
+
+		// script for widget upload fields
+if ( 'widgets' === $screen->id ) {
+	wp_enqueue_script( 'kopa_media_uploader' );
+	wp_localize_script( 'kopa_media_uploader', 'kopa_upload_l10n', array(
+		'upload' => '+',
+		'remove' => '&ndash;',
+		) );
+	if ( function_exists( 'wp_enqueue_media' ) ) {
+		wp_enqueue_media();
 	}
-   
+} else {
+	wp_localize_script( 'kopa_media_uploader', 'kopa_upload_l10n', array(
+		'upload' => __( 'Upload', 'kopa-framework' ),
+		'remove' => __( 'Remove', 'kopa-framework' ),
+		) );
+}
+
+}
+
 }
 
 }

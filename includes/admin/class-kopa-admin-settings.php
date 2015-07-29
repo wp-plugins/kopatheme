@@ -58,7 +58,7 @@ class Kopa_Admin_Settings {
 
 			include_once( 'settings/class-kopa-settings-page.php' );
 
-			$settings[] = include( 'settings/class-kopa-settings-theme-options.php' );
+			// $settings[] = include( 'settings/class-kopa-settings-theme-options.php' );
 			$settings[] = include( 'settings/class-kopa-settings-sidebar-manager.php' );
 			$settings[] = include( 'settings/class-kopa-settings-layout-manager.php' );
 			$settings[] = include( 'settings/class-kopa-settings-backup-manager.php' );
@@ -188,7 +188,7 @@ class Kopa_Admin_Settings {
 		self::get_settings_pages();
 
 		// Get current tab/section
-		$kopa_current_tab = empty( $_GET['tab'] ) ? 'theme-options' : sanitize_title( $_GET['tab'] );
+		$kopa_current_tab = empty( $_GET['tab'] ) ? apply_filters( 'kopa_current_tab_default', 'sidebar-manager' ) : sanitize_title( $_GET['tab'] );
 
 		// Determines whether or not show save submit button
 		$kopa_show_save_button = true;
@@ -326,7 +326,7 @@ class Kopa_Admin_Settings {
 	 * @static
 	 */
 	public static function sanitize_option_arguments( $option = array() ) {
-		return wp_parse_args( $option, array(
+		$option = wp_parse_args( $option, array(
 			// common arguments
 			'type'    => '',
 			'id'      => '',
@@ -336,6 +336,23 @@ class Kopa_Admin_Settings {
 			'default' => '',
 			'desc'    => '',
 		) );
+
+		// Sanitize fields
+		$allowed_tags = array(
+			'abbr'      => array( 'title' => true ),
+			'acronym'   => array( 'title' => true ),
+			'code'      => true,
+			'em'        => true,
+			'strong'    => true,
+			'a'         => array(
+				'href'  => true,
+				'title' => true,
+			),
+		);
+
+		$option['desc'] = wp_kses( $option['desc'], $allowed_tags );
+
+		return $option;
 	}
 
 	/**
@@ -388,7 +405,7 @@ class Kopa_Admin_Settings {
 			$option_wrap_start .= '<div class="kopa_option">';
 
 			if ( $value['desc'] ) {
-				$option_wrap_start .= '<div class="kopa_description">'.wpautop( esc_html( $value['desc'] ) ).'</div>';
+				$option_wrap_start .= '<div class="kopa_description">'.wpautop( $value['desc'] ).'</div>';
 			}
 			$option_wrap_start .= '<div class="kopa_controls">';
 			
@@ -674,7 +691,7 @@ class Kopa_Admin_Settings {
 					$output .= '</select>';
 
 					// font size
-					$output .= '<input type="text" class="kopa_select_font_size" name="'.esc_attr( $value['id'] ).'[size]" data-main-id="'.esc_attr( $value['id'] ).'" value="'.esc_attr( $option_value['size'] ).'">';
+					$output .= '<input type="text" class="kopa_select_font_size" name="'.esc_attr( $value['id'] ).'[size]" data-main-id="'.esc_attr( $value['id'] ).'" value="'.esc_attr( $option_value['size'] ).'" placeholder="'.esc_attr__( 'Font size', 'kopa-framework' ).'">';
 
 					// font color
 					$output .= '<input class="kopa_select_font_color" name="'.esc_attr( $value['id'] ).'[color]" value="'.esc_attr( $option_value['color'] ).'" data-main-id="'.esc_attr( $value['id'] ).'" data-default-color="'.esc_attr( $option_value['color'] ).'">';

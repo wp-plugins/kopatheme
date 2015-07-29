@@ -21,16 +21,3 @@ include_once( 'kopa-settings-functions.php' );
 
 // google fonts, system fonts utility functions
 include_once( 'kopa-fonts-functions.php' );
-
-/**
- * Get textdomain for translation
- * 
- * @since 1.0.0
- */
-function kopa_get_domain() {
-	if ( defined( 'KOPA_DOMAIN' ) ) {
-		return KOPA_DOMAIN;
-	}
-
-	return 'kopa-framework';
-}

@@ -87,14 +87,19 @@ class Kopa_Layout_Taxonomy extends Kopa_Layout_Box {
 		$metas = get_theme_mod( '_custom_layout_taxonomies' );
 		$meta  = isset( $metas[ $term_id ] ) ? $metas[ $term_id ] : array();
 
+		// don't save if $_POST is empty
+		if ( empty( $_POST ) ) {
+        	return $post_id;
+		}
+
 		// check nonce
 		if ( ! isset( $_POST['_kopa_custom_layout'] ) ) {
-			return;
+			return $term_id;
 		}
 
 		// verify nonce
 		if ( ! wp_verify_nonce( $_POST['_kopa_custom_layout'], $screen . '_custom_layout' ) ) {
-			return;
+			return $term_id;
 		}
 
 		// custom layout data
